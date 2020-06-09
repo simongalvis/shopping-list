@@ -30,6 +30,10 @@ $('#js-shopping-list-form').on('submit', function(event) {
     event.preventDefault();
 });
 
-$('ul').on('click', 'li', function(event) {
-    $(this).remove();
+$('.shopping-item-toggle').on('click', function(event) {
+    $(this).closest('li').css('text-decoration', 'line-through');
+});
+
+$('.shopping-item-delete').on('click', function(event) {
+    $(this).closest('li').remove();
 });
