@@ -30,10 +30,12 @@ $('#js-shopping-list-form').on('submit', function(event) {
     event.preventDefault();
 });
 
-$('.shopping-item-toggle').on('click', function(event) {
-    $(this).closest('li').css('text-decoration', 'line-through');
+$('.shopping-list').on('click', '.shopping-item-toggle', function(event) {
+    $(this).closest('li').toggleClass('shopping-item__checked')
 });
 
-$('.shopping-item-delete').on('click', function(event) {
+
+
+$('.shopping-list').on('click', '.shopping-item-delete', function(event) {
     $(this).closest('li').remove();
 });
